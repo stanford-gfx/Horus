@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horus</title>
+</head>
+
+<!-- FIRST we import all our style sheets -->
+<link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='css/styles.less') }}" />
+<link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='css/lib/jquery-ui.min.css') }}" />
+<link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='css/lib/jquery-ui.structure.min.css') }}" />
+
+<!-- SECOND we import javascript libraries -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBpV71HLiLws12Xx4EaQspjvLoIOCZD8I4"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script src="{{ url_for('static', filename='js/lib/less-1.7.5.min.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/lib/require.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/lib/timer.js') }}" type="application/javascript"></script>
+
+<!-- THIRD we import our javascript code -->
+<script src="{{ url_for('static', filename='js/init.js') }}" type="application/javascript"></script>
+        
+<body>
+
+<div id="popover">
+    <div><img src="/static/img/ajax-loader.gif"/></div>
+    <div id="popover-message"></div>
+</div>
+
+<div id="container">
+
+<div class="ll" id="ll_topbar">
+		<div id="title"><a href="/">Horus</a></div>
+        <a href="javascript:void(0);" class="btn" id="btn_save">Save</a>
+        <input type="text" name="shot_name" id="shot_name"/>
+        <span id="revision_count">0/0</span>
+        <a href="javascript:void(0);" class="btn" id="btn_sun">Show Sun Control</a>
+<!--         
+		<a href="javascript:void(0);" class="btn" id="btn_recalc">Recalculate</a>
+        <a href="javascript:void(0);" class="btn" id="btn_calc_feasibility">Calculate Feasibility</a>
+ -->        
+ 		<a href="javascript:void(0);" class="btn" id="btn_export_spline">Start Flight!</a>
+
+        <a href="javascript:void(0);" class="btn" id="btn_optimize">Optimize</a>
+
+        <a href="javascript:void(0);" class="btn" id="btn_playback">Playback(<i>space</i>)<br/></a>
+        <a href="javascript:void(0);" class="btn btn-green" id="btn_add_kf">Add KF (<i>s</i>)</a>
+        <a href="javascript:void(0);" class="btn btn-green" id="btn_del_kf">Delete KF (<i>d</i>)</a>
+        <a href="javascript:void(0);" class="btn btn-green" id="btn_save_kf">Update KF (<i>s</i>)</a>
+        <a href="javascript:void(0);" class="btn btn-green" id="btn_undo_kf">Revert KF (<i>c</i>)</a>
+</div>	
+
+<div id="ll_middle">
+
+	<div id="ll_bigtop">
+		<div id="ll_bigtop_left">
+			<div id="ll_bigtop_left_contents">
+			<div class="box" id="g_camera_view_container"><div id="g_camera_view" class="box-content"></div></div>
+			</div>
+		</div>
+		<div id="ll_bigtop_right">
+			<div id="g_god_view"></div>
+		</div>
+		<div class="ll" id="ll_scrubber">
+		    <div id="scrub_control"></div>
+		    <div id="scrub_time_text" class="monospace"><span id="scrub_progress">00:00.00</span> / <span id="scrub_max">00:00.00</span></div>
+		    <button id="prev_kf_button" class="scrub_button" type="button">&lt;&lt;</button>
+		    <button id="scrub_pp_button" class="scrub_button" type="button">Play</button>
+		    <button id="next_kf_button" class="scrub_button" type="button">&gt;&gt;</button>
+		</div>	
+
+	</div>
+
+	<div class="ll" id="ll_bigbottom">
+	   <span id="look_from_easing_curve"></span>
+	   &nbsp;
+	   <span id="look_at_easing_curve"></span>
+	</div>	
+
+	<div id="ll_right">
+
+	    <div class="ll_right_tabcontainer" id="right_tabcontainer">
+	    	<div class="ll_right_tab" id="tab_inspector">Inspector</div>
+	    	<div class="ll_right_tab ll_right_last_tab" id="tab_feasibility">Feasibility</div>
+		</div>
+
+	    <div class="ll_right_section" id="section_inspector">
+		    <div class="setting">
+			    <h3>Info</h3>
+			    <div id="data">Number of Keyframes...</div> <!-- data stuff goes here -->
+		    </div>
+
+		    <div class="setting">
+			    <h3>Shot Duration</h3>
+			    <form action="">
+		            <label for="minutes">Minutes:</label>
+		            <input type="number" id="minutes" name="minutes"><br>
+		            <label for="seconds">Seconds:</label>
+		            <input type="number" id="seconds" name="seconds"><br>
+		            <label for="scale">Scale?</label>
+		            <input type="radio" id="scale" name="scale" value="true">Yes
+		            <input type="radio" id="noscale" name="scale" value="false">No
+		        </form>
+		        <button id="update_duration_button" class="btn btn-green">Change Duration</button>
+		    </div>
+
+<!-- 			
+			<div class="setting">
+				<h3>Quad Properties</h3>
+			    <form>
+			    <select id="quadProperties">
+			    <option value="IRIS+">IRIS+ w Gimbal</option>
+			    <option value="Solo">Solo</option>
+			    </select>
+			    </form>
+			</div> 
+-->
+
+			<div class="setting">
+				<h3>Lens Properties</h3>
+			    <form>
+			    <input type="radio" name="FOV" value="NARROW" id="fov_narrow">Narrow <br/>
+			    <input type="radio" name="FOV" value="MEDIUM" id="fov_medium" checked=true>Medium <br/>
+			    <input type="radio" name="FOV" value="WIDE" id="fov_wide">Wide <br/>
+			    </form>
+			</div>
+
+			<div class="setting">
+				<h3>Camera Aspect Ratio</h3>
+				<form action="">
+			        <input type="radio" id="ratio16-9" name="ratio" value="16:9" checked="checked">16:9<br />
+			        <input type="radio" id="ratio4-3" name="ratio" value="4:3">4:3<br />
+        		</form>
+			</div>
+
+			<div class="setting">
+				<h3>View Properties</h3>
+			    <div id="lookAtData">
+			        LookAt:<br/>
+			        <table>
+			        <tr><td>Lat</td><td><input type="text" id="la_lat"/></td></tr>
+			        <tr><td>Lng</td><td><input type="text" id="la_lng"/></td></tr>
+			        <tr><td>Alt</td><td><input type="text" id="la_alt"/></td></tr>
+			        </table>
+			    </div>
+			    <br/>
+			    <div id="lookFromData">
+			        LookFrom:<br/>
+			        <table>
+			        <tr><td>Lat</td><td><input type="text" id="lf_lat"/></td></tr>
+			        <tr><td>Lng</td><td><input type="text" id="lf_lng"/></td></tr>
+			        <tr><td>Alt</td><td><input type="text" id="lf_alt"/></td></tr>
+			        </table>
+			    </div>
+			    <br/>
+			    <div id="PoseData">
+			        Angles In Degrees:<br/>
+			        <table>
+			        <tr><td>Roll</td><td><span id="roll"></span></td></tr>
+			        <tr><td>Pitch</td><td><span id="pitch"></span></td></tr>
+			        <tr><td>Yaw</td><td><span id="yaw"></span></td></tr>
+			        </table>
+			    </div>
+			</div>
+	    </div>
+
+	    <div class="ll_right_section" id="section_feasibility">
+
+	    	<div class="setting">
+	    		<h3>Feasibility Plots</h3>
+	            <div id="feasibility_plots">
+	                <div id="motor_forces_plot"></div>
+	                <div id="world_space_pos_plot"></div>
+	                <div id="world_space_vel_plot_h"></div>
+	                <div id="world_space_vel_plot_v"></div>
+	                <div id="world_space_acc_plot_h"></div>
+	                <div id="world_space_acc_plot_v"></div>
+	                <div id="gimbal_angle_roll_plot"></div>
+	                <div id="quad_lean_angle_plot"></div>
+	                <div id="gimbal_angle_pitch_plot"></div>
+	                <div id="gimbal_angle_yaw_plot"></div>
+	                <div id="gimbal_velocity_plot"></div>                
+	            </div>
+	    	</div>
+
+	    </div>
+
+
+	</div>
+
+</div>
+
+<div class="ll" id="ll_bottombar">
+    <div id="bg_process_spinner">
+    	<div><img src="/static/img/reparam_ajax-loader.gif"/></div>
+    </div>
+    <div id="info_message">Info</div>
+    <div id="recoverable_error_message">Recoverable errors appear here.</div>
+</div>
+
+</div>
+
+</body>
+</html>

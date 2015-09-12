@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+html, body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}	
+
+#topbar {
+	position: absolute;
+	top: 0;
+	height: 25px;
+	left: 0;
+	right: 0;
+	background: red;
+}
+
+#rightinspector {
+	position: absolute;
+	top: 25px;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	background: green;
+}
+
+
+#views {
+	position: absolute;
+	top: 25px;
+	bottom: 40%;
+	left: 0;
+	right: 300px;
+	background: blue;
+}
+
+#scrubber {
+	position: absolute;
+	top: 60%;
+	height: 25px;
+	left: 0;
+	right: 300px;
+	background: blue;
+}
+
+#feasibilityplots {
+	position: absolute;
+	top: calc(60% + 25px);
+	bottom: 0;
+	left: 0;
+	right: 300px;
+	background: gray;
+}
+
+#earth {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 40%;
+	background: purple;
+}
+
+#maps {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 60%;
+	right: 0;
+	background: yellow;
+}
+
+
+.tab {
+	width: 100%;
+	height: 100%;
+}
+.tabInvisible {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+</style>	
+</head>
+<body>
+
+<div id="container">
+	<div id="topbar">
+		<a href="javascript:void(0);" id="flipbutton">TOPBAR</a>
+	</div>	
+	<div id="rightinspector">
+		<div id="tab1" class="tab">TAB1</div>
+		<div id="tab2" class="tabInvisible">TAB2</div>
+	</div>
+
+	<div id="views">
+		<div id="earth">earth</div>
+		<div id="maps">map</div>		
+	</div>
+	<div id="scrubber">scrubber</div>
+	<div id="feasibilityplots">feasibility</div>
+</div>
+<script type="text/javascript">
+	
+var visible = 'tab1';
+var invisible = 'tab2';
+document.getElementById("flipbutton").addEventListener("click", function() {
+	var temp = visible;
+	visible = invisible;
+	invisible = temp;
+
+	document.getElementById(visible).className="tab";
+	document.getElementById(invisible).className="tabInvisible";
+
+})
+
+</script>
+</body>
+</html>

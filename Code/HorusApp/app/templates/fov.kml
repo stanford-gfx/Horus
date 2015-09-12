@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<gx:Tour>
+	<name>FOV</name>
+	<gx:Playlist>
+		<gx:FlyTo>
+			<LookAt>
+				<longitude>{{ view['lng'] }}</longitude>
+				<latitude>{{ view['lat'] }}</latitude>
+				<altitude>{{ view['altitude'] }}</altitude>
+				<heading>{{ view['heading'] }}</heading>
+				<tilt>{{ view['tilt'] }}</tilt>
+				<roll>0</roll>
+				<gx:altitudeMode>absolute</gx:altitudeMode>
+				 <gx:horizFov>{{ view['fov'] }}</gx:horizFov> 
+			</LookAt>
+		</gx:FlyTo>
+		<gx:Wait><gx:duration>0</gx:duration>
+</gx:Wait>
+	</gx:Playlist>
+</gx:Tour>
+</kml>

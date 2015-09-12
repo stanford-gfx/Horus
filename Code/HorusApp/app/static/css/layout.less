@@ -1,0 +1,184 @@
+
+
+/* ============================ 
+ * START LAYOUT
+ * ============================ */
+
+@right_width: 280px;
+@topbar_height: 26px;
+@bottombar_height: 20px;
+@bigbottom_percentage: 44%;
+
+html, body {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+#index_container {
+	margin-left: 20px;
+}
+#container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	min-width: 1340px;
+	min-height: 600px;
+}
+
+#ll_topbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: @topbar_height;
+	width: 100%;
+}
+
+#ll_bottombar {
+	position:absolute;
+	bottom:0;
+	left: 0;
+	right: 0;
+	height: @bottombar_height;
+}
+
+#ll_middle {
+	position:absolute;
+	top: @topbar_height;
+	bottom: @bottombar_height;
+	left: 0;
+	right: 0;
+
+	#ll_bigtop {
+		position: absolute;
+		top: 0;
+		bottom: @bigbottom_percentage;
+		left: 0;
+		right: @right_width;
+
+		#ll_bigtop_left {
+			position: absolute;
+			top: 0;
+			bottom: 28px;
+			left: 0;
+			width: 60%;
+		}
+		#ll_bigtop_right {
+			position: absolute;
+			top: 0;
+			bottom: 28px;
+			width: 40%;
+			right: 0;
+		}
+		#ll_scrubber {
+			position: absolute;
+			height: 28px;
+			bottom: 0;
+			left:0;
+			right:0;
+		}
+	}
+
+	#ll_bigbottom {
+		position: absolute;
+		height: @bigbottom_percentage;
+		bottom: 0;
+		left: 0;
+		right: @right_width;
+	}
+
+	#ll_right {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: @right_width;
+	}
+
+}
+
+.ll {
+	display: flex;
+}
+
+#popover {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 1000;
+}
+
+
+/* ============================ 
+ * TABS
+ * ============================ */
+
+#ll_right {
+	overflow: auto;
+}
+
+.ll_right_tabcontainer {
+	display: flex
+}
+
+.ll_right_tab {
+	flex: 1
+}
+
+/* ============================ 
+ * ELEMENT-WISE LAYOUT
+ * ============================ */
+
+#g_camera_view {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+#g_god_view {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+#ll_bigtop_left {
+	display: flex;
+}
+#ll_bigtop_left_contents {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	background: black;
+}
+
+.box {
+	position:relative;
+    margin: 0px auto;
+}
+
+.box-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+/* ============================ 
+ * ELEMENT-WISE STYLING
+ * ============================ */
+
+#ll_bottombar {
+	background: gray;
+}
+
+#btn_optimize {
+	display: none;
+}

@@ -1,0 +1,333 @@
+@import "lib/normalize.css";
+@import "layout.less";
+
+@c_bg: rgb(37, 39, 33);
+@c_highlight_text: rgb(255,255,255);
+@c_text: rgb(200,200,200);
+@c_border: rgb(148,148,148);
+@c_accent: rgb(108,194,181);
+@c_link: #ddd;
+@c_input_bg: rgb(100,100,100);
+@c_fill: gray;
+
+
+@font-face {
+  font-family: 'Anaheim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anaheim'), local('Anaheim-Regular'), url(/static/css/lib/Anaheim-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+html, body {
+	background-color: @c_bg;
+	color: @c_highlight_text;
+	font-family: 'Anaheim', sans-serif;
+	font-size: 10pt;
+}
+
+a {
+	color: @c_link;
+}
+
+input, textarea, button {
+	color:black;
+	font-face: "Anaheim", "Lucida Console", Monaco, monospace;
+	font-size: 10pt;
+  border-radius: 2pt;
+  border: 0;
+}
+
+input, textarea {
+  padding: 1px;
+  background-color: @c_input_bg;
+  margin-left: 2px;
+  margin-right: 2px;
+  
+}
+
+.monospace {
+  font-family: "Monaco", monospace;
+  font-size: 8pt
+}
+
+#title {
+  color: @c_accent;
+  font-size: 16pt;
+  padding-left: 6pt;
+  padding-right: 6pt;
+  font-weight: bold;
+
+  a {
+    text-decoration: none;
+    color: @c_accent;
+  } 
+}
+
+#index_container {
+  h1 {
+    color: @c_accent;
+  }
+}
+
+#popover {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 1000;
+}
+
+#ll_topbar {
+
+  .btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 9;
+    -moz-border-radius: 9;
+    border-radius: 9px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 6px 16px 6px 16px;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+
+  .btn-green {
+  	  background: #70d934;
+    background-image: -webkit-linear-gradient(top, #70d934, #43ad1a);
+    background-image: -moz-linear-gradient(top, #70d934, #43ad1a);
+    background-image: -ms-linear-gradient(top, #70d934, #43ad1a);
+    background-image: -o-linear-gradient(top, #70d934, #43ad1a);
+    background-image: linear-gradient(to bottom, #70d934, #43ad1a);
+  }
+
+  .btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+}
+
+#ll_statusbottom {
+  background: @c_input_bg;
+}
+
+#ll_right {
+
+  td {
+    padding: 2px;
+
+    input, textarea {
+      font-size: 8pt;
+      background-color: @c_input_bg;
+      font-face: "Anaheim";
+    }
+  }
+
+  h3 {
+    margin: 4px 0px 6px 0px;
+    color: white;
+  }
+
+  .setting {
+    padding: 2px 4px;
+    //margin: 4px 2px 4px 2px;
+    border: 2px solid @c_fill;
+    border-top: 4px solid @c_fill;
+    border-bottom: 4px solid @c_fill;
+    //border-radius: 6px;
+    color: @c_text;
+    background: @c_bg;
+  }
+
+  .ll_right_tab {
+    background: @c_fill;
+    border-top: 1px solid @c_border;
+    border-left: 1px solid @c_border;
+    border-right: 1px solid @c_border;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0px 1px 0px 0px;
+    padding: 4px 4px;
+    font-family: Arial;
+    font-size: 8pt;
+  }
+  .ll_right_last_tab {
+    margin: 0px 0px 0px 1px;    
+  }
+
+  .tab_invisible {
+    background: transparent;
+  }
+
+  .tab_infeasible {
+    background:red !important;
+  }
+
+  .ll_right_tab:hover {
+    background: #3cb0fd !important;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+    border-top: 1px solid #3cb0fd;
+    border-left: 1px solid #3cb0fd;
+    border-right: 1px solid #3cb0fd;
+  }
+
+
+
+  .ll_right_section {
+    background: @c_fill;
+    margin: 0;
+    border-left: 1px solid @c_border;
+    border-right: 1px solid @c_border;
+
+  }
+
+}
+
+#ll_scrubber {
+
+  .ui-slider-tick-mark{
+      display:inline-block;
+      width:1px;
+      background:red;
+      height:110%;
+      top: -1px;
+      position:absolute;
+  }
+
+  #scrub_control {
+    margin: 10px;
+    width: 70%;
+    flex: 1 0 auto;
+    background: @c_input_bg;
+    border-color: @c_border;
+  }
+
+  .scrub_button {
+    margin: 2px;
+    color: black;
+    background: @c_input_bg;
+  }
+
+  #scrub_pp_button {
+    width: 60px;
+  }
+
+  #scrub_time_text {
+    color: #fff;
+    padding: 3px 0;
+  }  
+
+}
+
+
+#scale_radio {
+	display: inline;
+}
+
+#bg_process_spinner {
+	display: none;
+}
+
+
+.error_message {
+	color: red;
+}
+
+.hidden_field {
+	display: none;
+}
+
+#popover img {
+
+}
+#popover #popover-message {
+
+}
+
+#recoverable_error_message, #info_message {
+   padding: 0px 2px;
+   margin: 0px 2px 0px 0px;
+}
+
+#recoverable_error_message {
+	 border: 1px solid rgb(255,0,0);
+	 background: rgb(190,0,0);
+	 color: #ffffff;
+}
+
+#info_message {
+	 border: 1px solid rgb(0,255,0);
+	 background: rgb(0,190,0);
+	 color: #ffffff;	
+}
+
+#feasibility_plots {
+  color:@c_highlight_text;
+}
+#feasibility_plots svg {
+  background-color: @c_fill;
+  font-size: 10px;
+  display: inline-block;
+  margin: 2px 0px;
+  fill:@c_highlight_text;
+}
+
+.plot_infeasible {
+  color:red;
+  border: 1px solid lightred;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.xLine {
+  fill: none;
+  stroke-width:1px;
+  stroke: rgba(0,0,0,0.1);
+  shape-rendering: crispEdges;
+}
+
+.constraintLine {
+  fill: none;
+  stroke: red;
+  stroke-width: 1.5px;
+  shape-rendering: crispEdges;
+}
+
+.scrubLine {
+	stroke: blue;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}

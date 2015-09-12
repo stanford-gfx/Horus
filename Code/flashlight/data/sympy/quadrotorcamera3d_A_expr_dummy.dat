@@ -1,0 +1,1 @@
+MutableDenseMatrix([[cos(Symbol('_dummy_psi_t_')), Integer(0), Mul(sin(Symbol('_dummy_psi_t_')), cos(Symbol('_dummy_theta_t_')))], [Integer(0), Integer(1), Mul(Integer(-1), sin(Symbol('_dummy_theta_t_')))], [Mul(Integer(-1), sin(Symbol('_dummy_psi_t_'))), Integer(0), Mul(cos(Symbol('_dummy_psi_t_')), cos(Symbol('_dummy_theta_t_')))]])

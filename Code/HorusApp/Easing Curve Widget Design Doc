@@ -1,0 +1,23 @@
+Easing Curve Widget Design Doc
+==============================
+
+
+- Easing curve shows total shot evolution
+- Horizontal axis is time, vertical is arc distance.
+- Can change the time of any keyframe by dragging left and right, but constrained to dist.
+- Can add additional other knots between kf times for interesting behavior.
+- Can scale overall time which scaled everything.
+
+Input:
+- Total shot length
+- Set of keyframes with associated time and associated distance along arc.
+--- doesn't have to end at max time
+
+API: [CB = callback]
+- CB1: Time of keyframe changed
+- SET: Scale entire spline [disable CB1]
+- SET: New keyframe list [disable CB1, other knots stay the same, so sort into list]
+- SET: Keyframe value changed  [time or distance, disable CB1]
+- SET: Current time we're displaying.
+- GET: Entire spline's knots
+- GET: Get eased distance along arc given a time (or list of times)

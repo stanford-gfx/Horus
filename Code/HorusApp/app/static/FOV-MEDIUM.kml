@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<gx:Tour>
+	<name>FOV 60</name>
+	<gx:Playlist>
+		<gx:FlyTo>
+			<LookAt>
+				<longitude>-122.16676019825722</longitude>
+				<latitude>37.42726975867168</latitude>
+				<altitude>125.2053637061234</altitude>
+				<heading>-31.127314342134174</heading>
+				<tilt>51.24538395621526</tilt>
+				<roll>0</roll>
+				<gx:altitudeMode>absolute</gx:altitudeMode>
+				 <gx:horizFov>94.4</gx:horizFov> 
+			</LookAt>
+		</gx:FlyTo>
+		<gx:Wait><gx:duration>2.239990635644062e-006</gx:duration>
+</gx:Wait>
+	</gx:Playlist>
+</gx:Tour>
+</kml>
