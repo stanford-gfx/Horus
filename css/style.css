@@ -72,3 +72,14 @@
   color: #8c1515;
   cursor: pointer;
 }
+.authorBox {
+  font-family: 'Inconsolata', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.authorBox img {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
