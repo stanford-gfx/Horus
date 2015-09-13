@@ -5,6 +5,8 @@ Content:
 
 An Interactive Tool for Designing Quadrotor Camera Shots
 
+to appear at SIGGRAPH Asia 2015
+
 - Authors
 
 Niels Joubert 
@@ -38,6 +40,14 @@ https://www.youtube.com/watch?v=CbznZu8ZAdU
 - Layman Video
 
 N/A
+
+- Tagline
+
+
+
+- Disclaimer
+
+All presented videos were captured fully autonomously with no human pilot.
 
 - Description
 
