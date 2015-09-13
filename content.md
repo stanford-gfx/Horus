@@ -1,5 +1,18 @@
-Content:
 
+
+### TWEAKS
+
+- Fix title overflow for mobile
+- Abstract padding
+- Tribute
+- Logos for Supported By
+
+- final links
+
+Non-HTML:
+- Header Video
+- Non-technical video
+- supplementary material tweaks
 
 
 ##################################

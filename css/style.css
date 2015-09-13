@@ -819,6 +819,7 @@
 .authorItem {
   display: inline-block;
   width: 19%;
+  min-width: 150px;
   font-family: 'Inconsolata', sans-serif;
   text-align: center;
   margin-bottom: 20px;
