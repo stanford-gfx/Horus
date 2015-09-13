@@ -34,12 +34,13 @@
   letter-spacing: 1px;
   line-height: 2.3rem;
 }
-.heroVideo-section-authorLink {
-  color: #4a4a4a;
-  font-family: 'Inconsolata', sans-serif;
-}
-.heroVideo-section-authorLink:hover {
+.heroVideo-section-attribution {
   color: #8c1515;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 0.5px;
+}
+.heroVideo-section-authors {
+  font-family: 'Inconsolata', sans-serif;
 }
 .section {
   font-size: 14px;
