@@ -2,11 +2,14 @@
 
 @import url(https://fonts.googleapis.com/css?family=Abel|Inconsolata:400,700|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
 
+@import "octicons.less";
+
 @color-text--dark: #4A4A4A;
 @color-text--light: #FFF;
 @color-background--dark: #4A4A4A;
 @color-buttonBorder: #4A4A4A;
 @color-stanford: #8c1515;
+@color-grey-background: #eee;
 
 @borderRadius-button: 0.5rem;
 
@@ -28,6 +31,9 @@
 @padding-button: 0.8rem;
 @padding-video--hoz: 4rem;
 @padding-video--vert: 2rem;
+@padding-section: 3rem 6rem;
+@padding-author: 0.5rem 0px 0.25rem 0px;
+@padding-small: 0.25rem;
 
 @zIndex-base: 10;
 @zIndex-videoText: 20;
@@ -37,7 +43,7 @@
 }
 
 .firstSection {
- padding-top: @height-video + 10vh;
+ padding-top: @height-video + 8vh !important;
 }
 
 .heroVideo-container {
@@ -82,13 +88,25 @@
  font-family: @font-accent;
 }
 
+.row {
+ max-width: none !important;
+}
+
 .section {
+ padding: @padding-section;
+
  font-size: 14px;
  letter-spacing: 0.6px;
  line-height: 1.5rem;
 }
 
+.sectionGrey {
+ background-color: @color-grey-background;
+}
+
 .sectionHeading {
+ margin-top: 0px;
+
  font-family: @font-title;
  font-size: @fontSize-heading;
  font-weight: normal;
@@ -105,9 +123,11 @@
  background-color: white;
  border: 2px solid @color-buttonBorder;
  border-radius: @borderRadius-button;
+ color: @color-text--dark;
  font-family: @font-button;
  font-size: @fontSize-button;
  line-height: @lineHeight-button;
+ text-align: center;
  text-transform: capitalize;
 
  &:hover {
@@ -118,7 +138,23 @@
 
 }
 
-.authorBox {
+.flex-video {
+ margin-top: 0.25*@padding-video--vert;
+ margin-bottom: @padding-video--vert;
+
+ &:last-of-type {
+  margin-bottom: 0px;
+ }
+}
+
+.authorItems {
+ text-align: center;
+}
+
+.authorItem {
+ display: inline-block;
+ width: 19%;
+
 	font-family: @font-accent;
     text-align: center;
     margin-bottom: 20px;
@@ -130,6 +166,27 @@
 
 		display:block;
 	}
+}
+
+.authorItem-name {
+ padding: @padding-author;
+
+ font-family: @font-title;
+}
+
+.authorItem-institution, .authorItem-email {
+
+ font-size: 12px;
+}
+
+.authorItem-links {
 
 }
 
+.authorItem-links-icon {
+ color: @color-text--dark;
+
+ &:hover {
+  color: @color-stanford;
+ }
+}
