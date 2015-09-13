@@ -2,12 +2,13 @@
 
 ### TWEAKS
 
-- [X]Fix title overflow for mobile
-- [X]Abstract padding
-- Tribute
+- [X] Fix title overflow for mobile
+- Fix width for mobile
+- [X] Abstract padding
+- [X] Tribute
 - Logos for Supported By
-- Copyright text and color
-- Add author notes
+- [X] Copyright text and color
+- [X] Add author notes
 - Final links
 
 Non-HTML:
