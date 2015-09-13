@@ -67,8 +67,7 @@
   text-transform: capitalize;
 }
 .sectionButton:hover {
-  background-color: #8c1515;
   border: 2px solid #8c1515;
-  color: white;
+  color: #8c1515;
   cursor: pointer;
 }
