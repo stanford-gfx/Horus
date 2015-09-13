@@ -1,6 +1,6 @@
 
 
 all:
-	lessc stylesheets/style.less stylesheets/style.css
+	lessc css/style.less css/style.css
 
 .phony: all
