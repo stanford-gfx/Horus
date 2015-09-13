@@ -6,14 +6,19 @@
 - Abstract padding
 - Tribute
 - Logos for Supported By
-
-- final links
+- Copyright text and color
+- Add author notes
+- Final links
 
 Non-HTML:
-- Header Video
+- Header Video. Maybe show off tool?
 - Non-technical video
 - supplementary material tweaks
+- Dedicated URL? 
 
+Additional Sections?
+- Project Status / "Reqruiting" page
+- 
 
 ##################################
 ## Top Section
