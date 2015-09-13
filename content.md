@@ -60,3 +60,12 @@ Thumbnail screenshot of Hoover Tower final results
 Animated Gifs of the results?
 Animated Gifs of editing session?
 Background video?
+
+
+## EXAMPLES
+
+http://www.cs.cornell.edu/~sbell/
+
+http://research.microsoft.com/en-us/um/redmond/projects/hyperlapse/
+
+http://research.microsoft.com/en-us/um/redmond/projects/hyperlapseapps/
