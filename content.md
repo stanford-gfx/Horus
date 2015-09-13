@@ -7,15 +7,29 @@ An Interactive Tool for Designing Quadrotor Camera Shots
 
 - Authors
 
-Niels Joubert (website http://njoubert.com/) (email niels@cs.stanford.edu)
+Niels Joubert 
+Stanford University
+niels@cs.stanford.edu
+http://njoubert.com/
 
-Mike Roberts (website http://graphics.stanford.edu/~mlrobert/) (email mlrobert@stanford.edu)
 
-Anh Troung (email )
+Mike Roberts 
+Stanford University
+mlrobert@stanford.edu
+http://graphics.stanford.edu/~mlrobert/
+
+Anh Troung 
+Stanford University
+anhlt92@stanford.edu
+
 
 Floraine Berthouzoz
+Adobe Research
 
-Pat Hanrahan (website https://graphics.stanford.edu/~hanrahan/) (email hanrahan@cs.stanford.edu)
+Pat Hanrahan
+Stanford University
+hanrahan@cs.stanford.edu
+https://graphics.stanford.edu/~hanrahan/
 
 - Paper Video
 
