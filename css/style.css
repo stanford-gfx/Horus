@@ -727,19 +727,24 @@
   z-index: 20;
 }
 .heroVideo-section-paperTitle {
+  color: white;
   font-family: 'Abel', sans-serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 2.3rem;
+  text-shadow: -2px 2px #4a4a4a;
 }
 .heroVideo-section-attribution {
-  color: #8c1515;
+  color: white;
   font-family: 'Abel', sans-serif;
   letter-spacing: 0.5px;
+  text-shadow: -1px 1px #4a4a4a;
 }
 .heroVideo-section-authors {
+  color: white;
   font-family: 'Inconsolata', sans-serif;
+  text-shadow: -1px 1px #4a4a4a;
 }
 .row {
   max-width: none !important;
@@ -753,12 +758,27 @@
 .sectionGrey {
   background-color: #eeeeee;
 }
+.sectionFooter {
+  padding: 0.5rem;
+  background-color: #4a4a4a;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
 .sectionHeading {
   margin-top: 0px;
   font-family: 'Abel', sans-serif;
   font-size: 32px;
   font-weight: normal;
   letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.secondaryHeading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 18px;
   text-transform: uppercase;
 }
 .sectionButton {
@@ -788,7 +808,12 @@
 .flex-video:last-of-type {
   margin-bottom: 0px;
 }
+.author-tribute {
+  font-family: 'Inconsolata', sans-serif;
+  line-height: 1.3rem;
+}
 .authorItems {
+  margin-top: 2rem;
   text-align: center;
 }
 .authorItem {

@@ -19,8 +19,10 @@
 @font-accent: 'Inconsolata', sans-serif;
 
 @fontSize-heading: 32px;
-@fontSize-paperTitle: 28px;
+@fontSize-heading--secondary: 18px;
+@fontSize-paperTitle: 36px;
 @fontSize-button: 18px;
+@fontSize-footer: 11px;
 
 @height-video: 80vh;
 @height-stanford: 30px;
@@ -32,6 +34,7 @@
 @padding-video--hoz: 4rem;
 @padding-video--vert: 2rem;
 @padding-section: 3rem 6rem;
+@padding-footer: 0.5rem;
 @padding-author: 0.5rem 0px 0.25rem 0px;
 @padding-small: 0.25rem;
 
@@ -71,21 +74,26 @@
 }
 
 .heroVideo-section-paperTitle {
+ color: white;
  font-family: @font-title;
- font-size: @fontSize-heading;
+ font-size: @fontSize-paperTitle;
  font-weight: normal;
  letter-spacing: 1px;
  line-height: @lineHeight-paperTitle;
+ text-shadow: -2px 2px @color-text--dark;
 }
 
 .heroVideo-section-attribution {
- color: @color-stanford;
+ color: white;
  font-family: @font-title;
  letter-spacing: 0.5px;
+ text-shadow: -1px 1px @color-text--dark;
 }
 
 .heroVideo-section-authors {
+ color: white;
  font-family: @font-accent;
+ text-shadow: -1px 1px @color-text--dark;
 }
 
 .row {
@@ -104,6 +112,16 @@
  background-color: @color-grey-background;
 }
 
+.sectionFooter {
+ padding: @padding-footer;
+
+ background-color: @color-text--dark;
+ color: white;
+ font-size: @fontSize-footer;
+ letter-spacing: 0.7px;
+ text-align: center;
+}
+
 .sectionHeading {
  margin-top: 0px;
 
@@ -111,6 +129,15 @@
  font-size: @fontSize-heading;
  font-weight: normal;
  letter-spacing: 1px;
+ text-transform: uppercase;
+}
+
+.secondaryHeading {
+ margin-top: 0px;
+ margin-bottom: 0px;
+
+ font-family: @font-accent;
+ font-size: @fontSize-heading--secondary;
  text-transform: uppercase;
 }
 
@@ -147,7 +174,13 @@
  }
 }
 
+.author-tribute {
+ font-family: @font-accent;
+ line-height: 1.3rem;
+}
+
 .authorItems {
+ margin-top: @padding-video--vert;
  text-align: center;
 }
 
