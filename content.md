@@ -39,7 +39,8 @@ We show that our tool makes it possible for novices and experts to design compel
 
 - Links to Paper
 
-
+PDF Paper
+PDF Supplementary Material
 
 - Links to Code
 
