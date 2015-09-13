@@ -24,13 +24,13 @@
 @fontSize-button: 18px;
 @fontSize-footer: 11px;
 
-@height-video: 80vh;
+@height-video: 56.25vw;
 @height-stanford: 30px;
 
 @lineHeight-button: 2.5rem;
 @lineHeight-paperTitle: 2.3rem;
 
-@padding-button: 0.8rem;
+@padding-button: 0.6rem;
 @padding-video--hoz: 4rem;
 @padding-video--vert: 2rem;
 @padding-section: 3rem 6rem;
@@ -38,6 +38,7 @@
 @padding-author: 0.5rem 0px 0.25rem 0px;
 @padding-small: 0.25rem;
 
+@subsection-padding: 4vh !important;
 @zIndex-base: 10;
 @zIndex-videoText: 20;
 
@@ -46,15 +47,19 @@
 }
 
 .firstSection {
- padding-top: @height-video + 8vh !important;
+ padding-top: @height-video + @subsection-padding;
 }
 
+.subsection {
+	padding-bottom: @subsection-padding;
+}
 .heroVideo-container {
  position: absolute;
  left: 0px;
  top: @height-stanford;
  width: 100%;
  height: @height-video;
+ max-height: 100vh;
  overflow: hidden;
  z-index: @zIndex-base;
 }
@@ -142,9 +147,11 @@
 }
 
 .sectionButton {
+ margin-left: auto;
+ margin-right: auto;
  margin-bottom: 1rem;
- padding-left: @padding-button;
- padding-right: @padding-button;
+ padding-top:    @padding-button;
+ padding-bottom: @padding-button;
  width: 85%;
 
  background-color: white;
@@ -153,7 +160,7 @@
  color: @color-text--dark;
  font-family: @font-button;
  font-size: @fontSize-button;
- line-height: @lineHeight-button;
+ line-height: ;
  text-align: center;
  text-transform: capitalize;
 

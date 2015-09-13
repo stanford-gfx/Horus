@@ -703,14 +703,18 @@
   font-family: 'Open Sans', sans-serif;
 }
 .firstSection {
-  padding-top: 88vh !important;
+  padding-top: 60.25vw !important;
+}
+.subsection {
+  padding-bottom: 4vh !important;
 }
 .heroVideo-container {
   position: absolute;
   left: 0px;
   top: 30px;
   width: 100%;
-  height: 80vh;
+  height: 56.25vw;
+  max-height: 100vh;
   overflow: hidden;
   z-index: 10;
 }
@@ -782,9 +786,11 @@
   text-transform: uppercase;
 }
 .sectionButton {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1rem;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
   width: 85%;
   background-color: white;
   border: 2px solid #4a4a4a;
@@ -792,7 +798,7 @@
   color: #4a4a4a;
   font-family: 'Abel', sans-serif;
   font-size: 18px;
-  line-height: 2.5rem;
+  line-height: ;
   text-align: center;
   text-transform: capitalize;
 }
