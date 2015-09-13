@@ -6,6 +6,7 @@
 @color-text--light: #FFF;
 @color-background--dark: #4A4A4A;
 @color-buttonBorder: #4A4A4A;
+@color-stanford: #8c1515;
 
 @borderRadius-button: 0.5rem;
 
@@ -15,44 +16,38 @@
 @font-accent: 'Inconsolata', sans-serif;
 
 @fontSize-heading: 32px;
+@fontSize-paperTitle: 28px;
 @fontSize-button: 18px;
 
-@lineHeight-button: 2.5rem;
+@height-video: 80vh;
+@height-stanford: 30px;
 
-@padding-section: 5rem;
-@padding-gutter: 1rem;
+@lineHeight-button: 2.5rem;
+@lineHeight-paperTitle: 2.3rem;
+
 @padding-button: 0.8rem;
+@padding-video--hoz: 4rem;
+@padding-video--vert: 2rem;
+
+@zIndex-base: 10;
+@zIndex-videoText: 20;
 
 * {
  font-family: @font-text;
 }
 
-
-.section {
- font-size: 14px;
- letter-spacing: 0.6px;
- line-height: 1.5rem;
-}
-
 .firstSection {
- padding-top: 90vh;
-}
-
-.heading {
- font-family: @font-title;
- font-size: @fontSize-heading;
- font-weight: normal;
- letter-spacing: 1px;
- text-transform: uppercase;
+ padding-top: @height-video + 10vh;
 }
 
 .heroVideo-container {
  position: absolute;
  left: 0px;
- top: 0px;
+ top: @height-stanford;
  width: 100%;
- height: 80vh;
+ height: @height-video;
  overflow: hidden;
+ z-index: @zIndex-base;
 }
 
 .heroVideo {
@@ -62,6 +57,43 @@
  width: 100%;
 }
 
+.heroVideo-section {
+ position: absolute;
+ bottom: @padding-video--vert;
+ left: @padding-video--hoz;
+ z-index: @zIndex-videoText;
+}
+
+.heroVideo-section-paperTitle {
+ font-family: @font-title;
+ font-size: @fontSize-heading;
+ font-weight: normal;
+ letter-spacing: 1px;
+ line-height: @lineHeight-paperTitle;
+}
+
+.heroVideo-section-authorLink {
+ color: @color-text--dark;
+ font-family: @font-accent;
+
+ &:hover {
+  color: @color-stanford;
+ }
+}
+
+.section {
+ font-size: 14px;
+ letter-spacing: 0.6px;
+ line-height: 1.5rem;
+}
+
+.sectionHeading {
+ font-family: @font-title;
+ font-size: @fontSize-heading;
+ font-weight: normal;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+}
 
 .sectionButton {
  margin-bottom: 1rem;
@@ -78,7 +110,8 @@
  text-transform: capitalize;
 
  &:hover {
-  background-color: @color-background--dark;
+  background-color: @color-stanford;
+ border: 2px solid @color-stanford;
   color: white;
   cursor: pointer;
  }

@@ -3,34 +3,55 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
-.section {
-  font-size: 14px;
-  letter-spacing: 0.6px;
-  line-height: 1.5rem;
-}
 .firstSection {
   padding-top: 90vh;
-}
-.heading {
-  font-family: 'Abel', sans-serif;
-  font-size: 32px;
-  font-weight: normal;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 .heroVideo-container {
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: 30px;
   width: 100%;
   height: 80vh;
   overflow: hidden;
+  z-index: 10;
 }
 .heroVideo {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
+}
+.heroVideo-section {
+  position: absolute;
+  bottom: 2rem;
+  left: 4rem;
+  z-index: 20;
+}
+.heroVideo-section-paperTitle {
+  font-family: 'Abel', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 2.3rem;
+}
+.heroVideo-section-authorLink {
+  color: #4a4a4a;
+  font-family: 'Inconsolata', sans-serif;
+}
+.heroVideo-section-authorLink:hover {
+  color: #8c1515;
+}
+.section {
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  line-height: 1.5rem;
+}
+.sectionHeading {
+  font-family: 'Abel', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .sectionButton {
   margin-bottom: 1rem;
@@ -46,7 +67,8 @@
   text-transform: capitalize;
 }
 .sectionButton:hover {
-  background-color: #4a4a4a;
+  background-color: #8c1515;
+  border: 2px solid #8c1515;
   color: white;
   cursor: pointer;
 }

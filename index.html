@@ -19,17 +19,50 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+      <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
+    <![endif]-->
   </head>
   <body>
+
+  <!-- Brandbar snippet start -->
+  <div id="brandbar">
+    <div class="container">
+      <a href="http://www.stanford.edu">
+        <img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="Stanford University" width="152" height="23">
+      </a>
+    </div> <!-- .container end -->
+  </div> <!-- #brandbar end -->
+  <!-- Brandbar snippet end -->
 
   <div class="heroVideo-container">
     <video autoplay loop poster="images/00_TeaserVideo.Still.jpg" class="heroVideo">
       <source src="videos/00_TeaserVideo.mov" type="video/mp4">
     </video>
+    <div class="heroVideo-section">
+      <h1 class="heroVideo-section-paperTitle">
+        An Interactive Tool for<br/>Designing Quadrotor Camera Shots
+      </h1>
+      <div>
+        <a class="heroVideo-section-authorLink" href="">Niels Joubert</a>,
+        <a class="heroVideo-section-authorLink" href="">Mike Roberts</a>,
+        <a class="heroVideo-section-authorLink" href="">Anh Truong</a>,
+        <a class="heroVideo-section-authorLink" href="">Floraine Berthouzoz</a>,
+        <a class="heroVideo-section-authorLink" href="">Pat Hanrahan</a>
+      </div>
+    </div>
   </div>
   <div class="row section firstSection">
     <div class="large-9 columns">
-      <h1 class="heading">Abstract</h1>
+      <h1 class="sectionHeading">Abstract</h1>
       Cameras attached to small quadrotor aircraft are rapidly becoming a ubiquitous tool for cinematographers, enabling dynamic camera movements through 3D environments. Currently, professionals use these cameras by flying quadrotors manually, a process which requires much skill and dexterity. In this paper, we investigate the needs of quadrotor cinematographers, and build a tool to support video capture using quadrotor-based camera systems. We begin by conducting semi-structured interviews with professional photographers and videographers, from which we extract a set of design principles. We present a tool based on these principles for designing and autonomously executing quadrotor-based camera shots. Our tool enables users to: (1) specify shots visually using keyframes; (2) preview the resulting shots in a virtual environment; (3) precisely control the timing of shots using easing curves; and (4) capture the resulting shots in the real world with a single button click using commercially available quadrotors. We evaluate our tool in a user study with novice and expert cinematographers. We show that our tool makes it possible for novices and experts to design compelling and challenging shots, and capture them fully autonomously.
     </div>
     <div class="large-3 columns">
