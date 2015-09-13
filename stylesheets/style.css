@@ -4,11 +4,45 @@
   font-family: 'Open Sans', sans-serif;
 }
 .section {
-  padding: 4rem;
+  padding: 5rem;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  line-height: 1.5rem;
+}
+.column {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+.left-70 {
+  width: 68%;
+}
+.right-30 {
+  margin-left: 2%;
+  width: 29%;
 }
 .heading {
   font-family: 'Abel', sans-serif;
-  font-size: 36px;
-  letter-spacing: 2px;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 1px;
   text-transform: uppercase;
+}
+.sectionButton {
+  margin-bottom: 1rem;
+  width: 85%;
+  background-color: white;
+  border: 2px solid #4a4a4a;
+  border-radius: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+}
+.sectionButton:hover {
+  background-color: #4a4a4a;
+  color: white;
+  cursor: pointer;
 }

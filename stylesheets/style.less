@@ -4,14 +4,24 @@
 
 @color-text--dark: #4A4A4A;
 @color-text--light: #FFF;
+@color-background--dark: #4A4A4A;
+@color-buttonBorder: #4A4A4A;
 
+@borderRadius-button: 0.5rem;
+
+@font-button: 'Abel', sans-serif;
 @font-text: 'Open Sans', sans-serif;
 @font-title: 'Abel', sans-serif;
 @font-accent: 'Inconsolata', sans-serif;
 
-@fontSize-heading: 36px;
+@fontSize-heading: 32px;
+@fontSize-button: 18px;
 
-@padding-section: 4rem;
+@lineHeight-button: 2.5rem;
+
+@padding-section: 5rem;
+@padding-gutter: 1rem;
+@padding-button: 0.8rem;
 
 * {
  font-family: @font-text;
@@ -20,15 +30,57 @@
 
 .section {
  padding: @padding-section;
+
+ font-size: 14px;
+ letter-spacing: 0.6px;
+ line-height: 1.5rem;
+}
+
+.column {
+ display: inline-block;
+ margin: 0;
+ vertical-align: top;
+}
+
+.left-70 {
+ width: 68%;
+}
+
+.right-30 {
+ margin-left: 2%;
+ width: 29%;
 }
 
 .heading {
  font-family: @font-title;
  font-size: @fontSize-heading;
- letter-spacing: 2px;
+ font-weight: normal;
+ letter-spacing: 1px;
  text-transform: uppercase;
 }
 
 .videoSection {
+
+}
+
+.sectionButton {
+ margin-bottom: 1rem;
+ padding-left: @padding-button;
+ padding-right: @padding-button;
+ width: 85%;
+
+ background-color: white;
+ border: 2px solid @color-buttonBorder;
+ border-radius: @borderRadius-button;
+ font-family: @font-button;
+ font-size: @fontSize-button;
+ line-height: @lineHeight-button;
+ text-transform: capitalize;
+
+ &:hover {
+  background-color: @color-background--dark;
+  color: white;
+  cursor: pointer;
+ }
 
 }
