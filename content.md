@@ -4,17 +4,17 @@
 
 - [X] Fix title overflow for mobile
 - [X] Fix width for mobile
-- Fix header font for mobile
-- Fix video for mobile
+- [X] Fix header font for mobile
+- [X] Fix video for mobile
 - [X] Abstract padding
 - [X] Tribute
 - [X] Logos for Supported By
 - [X] Copyright text and color
 - [X] Add author notes
-- Final links
 - Bug: resize full screen width but only half height. huge space above "abstract" title (only first section)
 
-- [MAYBE] Down-arrow on video to indicate scrolling
+- Final links
+
 
 
 Non-HTML:
