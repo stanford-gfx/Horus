@@ -761,6 +761,12 @@
   font-family: 'Inconsolata', sans-serif;
   text-shadow: -1px 1px #4a4a4a;
 }
+.heroVideo-section-authors-subtitle {
+  color: white;
+  font-family: 'Inconsolata', sans-serif;
+  text-shadow: -1px 1px #4a4a4a;
+  font-size: 12px;
+}
 .row {
   max-width: none !important;
 }
