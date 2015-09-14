@@ -6,7 +6,7 @@
 - Fix width for mobile
 - [X] Abstract padding
 - [X] Tribute
-- Logos for Supported By
+- [X] Logos for Supported By
 - [X] Copyright text and color
 - [X] Add author notes
 - Final links

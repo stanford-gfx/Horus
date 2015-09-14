@@ -754,10 +754,17 @@
   max-width: none !important;
 }
 .section {
-  padding: 3rem 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   font-size: 14px;
   letter-spacing: 0.6px;
   line-height: 1.5rem;
+}
+@media (min-width: 760px) {
+  .section {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
 }
 .sectionGrey {
   background-color: #eeeeee;
@@ -827,7 +834,7 @@
 .authorItem {
   display: inline-block;
   width: 19%;
-  min-width: 150px;
+  min-width: 156px;
   font-family: 'Inconsolata', sans-serif;
   text-align: center;
   margin-bottom: 20px;
