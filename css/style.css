@@ -826,6 +826,8 @@
 .author-tribute {
   font-family: 'Inconsolata', sans-serif;
   line-height: 1.3rem;
+  margin: auto;
+  text-align: center;
 }
 .authorItems {
   margin-top: 2rem;
@@ -852,6 +854,7 @@
   display: inline-block;
   width: 24%;
   min-width: 200px;
+  padding: 1rem;
 }
 .authorItem-name {
   padding: 0.5rem 0px 0.25rem 0px;
