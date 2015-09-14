@@ -13,6 +13,8 @@
 - [X] Add author notes
 - Bug: resize full screen width but only half height. huge space above "abstract" title (only first section)
 
+- Resize youtube videos
+
 - Final links
 
 
