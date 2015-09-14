@@ -728,11 +728,6 @@
   overflow: hidden;
   z-index: 10;
 }
-@media not all and (min-width: 620px) {
-  .heroVideo-container {
-    font-size: 1em;
-  }
-}
 .heroVideo {
   position: absolute;
   left: 0px;
@@ -764,11 +759,20 @@
 .heroVideo-section-paperTitle {
   color: white;
   font-family: 'Abel', sans-serif;
-  font-size: 36px;
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 2.3rem;
   text-shadow: -2px 2px #4a4a4a;
+}
+@media all and (min-width: 620px) {
+  .heroVideo-section-paperTitle {
+    font-size: 36px;
+  }
+}
+@media not all and (min-width: 620px) {
+  .heroVideo-section-paperTitle {
+    font-size: 24px;
+  }
 }
 .heroVideo-section-attribution {
   color: white;

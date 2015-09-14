@@ -73,13 +73,6 @@
 }
 .heroVideo-container {
 
- @media all and (min-width: @mobile-breakpoint-px) {
-
- }
- @media not all and (min-width: @mobile-breakpoint-px) {
- 	font-size: 1em;
- }
-
  background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.png");
  background-repeat: no-repeat;
  background-size: 100% 100%;
@@ -118,7 +111,12 @@
 .heroVideo-section-paperTitle {
  color: white;
  font-family: @font-title;
- font-size: @fontSize-paperTitle;
+ @media all and (min-width: @mobile-breakpoint-px) {
+  font-size: @fontSize-paperTitle;
+ }
+ @media not all and (min-width: @mobile-breakpoint-px) {
+  font-size: @fontSize-paperTitle-mobile;
+ }
  font-weight: normal;
  letter-spacing: 1px;
  line-height: @lineHeight-paperTitle;
