@@ -703,7 +703,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 /******************** Media query mixins start *********************/
-@media not all and (min-width: 620px) {
+@media not all and (min-width: 668px) {
   .mobile-hide-div {
     display: none;
   }
@@ -731,7 +731,7 @@
   top: 0px;
   width: 100vw;
 }
-@media not all and (min-width: 620px) {
+@media not all and (min-width: 668px) {
   .heroVideo {
     display: none;
   }
@@ -741,13 +741,13 @@
   bottom: 3rem;
   z-index: 20;
 }
-@media all and (min-width: 620px) {
+@media all and (min-width: 668px) {
   .heroVideo-section {
     bottom: 3rem;
     left: 4rem;
   }
 }
-@media not all and (min-width: 620px) {
+@media not all and (min-width: 668px) {
   .heroVideo-section {
     bottom: 1rem;
     left: 1rem;
@@ -758,17 +758,18 @@
   font-family: 'Abel', sans-serif;
   font-weight: normal;
   letter-spacing: 1px;
-  line-height: 2.3rem;
   text-shadow: -2px 2px #4a4a4a;
 }
-@media all and (min-width: 620px) {
+@media all and (min-width: 668px) {
   .heroVideo-section-paperTitle {
     font-size: 36px;
+    line-height: 2.3rem;
   }
 }
-@media not all and (min-width: 620px) {
+@media not all and (min-width: 668px) {
   .heroVideo-section-paperTitle {
-    font-size: 24px;
+    font-size: 5vw;
+    line-height: 7vw;
   }
 }
 .heroVideo-section-attribution {
@@ -777,7 +778,7 @@
   letter-spacing: 0.5px;
   text-shadow: -1px 1px #4a4a4a;
 }
-@media not all and (min-width: 620px) {
+@media not all and (min-width: 668px) {
   .heroVideo-section-attribution {
     display: none;
   }
@@ -787,7 +788,7 @@
   font-family: 'Inconsolata', sans-serif;
   text-shadow: -1px 1px #4a4a4a;
 }
-@media not all and (min-width: 620px) {
+@media not all and (min-width: 668px) {
   .heroVideo-section-authors {
     display: none;
   }
@@ -802,7 +803,7 @@
   letter-spacing: 0.6px;
   line-height: 1.5rem;
 }
-@media (min-width: 620px) {
+@media (min-width: 668px) {
   .section {
     padding-left: 6%;
     padding-right: 6%;

@@ -18,12 +18,12 @@
 @font-title: 'Abel', sans-serif;
 @font-accent: 'Inconsolata', sans-serif;
 
-@mobile-breakpoint-px: 620px;
+@mobile-breakpoint-px: 668px;
 
 @fontSize-heading: 32px;
 @fontSize-heading--secondary: 18px;
 @fontSize-paperTitle: 36px;
-@fontSize-paperTitle-mobile: 24px;
+@fontSize-paperTitle-mobile: 5vw;
 @fontSize-author-small: 12px;
 
 @fontSize-button: 18px;
@@ -34,6 +34,7 @@
 
 @lineHeight-button: 2.5rem;
 @lineHeight-paperTitle: 2.3rem;
+@lineHeight-paperTitle-mobile: 7vw;
 
 @padding-button: 0.6rem;
 @padding-video--hoz: 4rem;
@@ -113,14 +114,16 @@
  color: white;
  font-family: @font-title;
  @media all and (min-width: @mobile-breakpoint-px) {
-  font-size: @fontSize-paperTitle;
+  font-size:   @fontSize-paperTitle;
+ 	line-height: @lineHeight-paperTitle;
+
  }
  @media not all and (min-width: @mobile-breakpoint-px) {
-  font-size: @fontSize-paperTitle-mobile;
+  font-size:   @fontSize-paperTitle-mobile;
+  line-height: @lineHeight-paperTitle-mobile;
  }
  font-weight: normal;
  letter-spacing: 1px;
- line-height: @lineHeight-paperTitle;
  text-shadow: -2px 2px @color-text--dark;
 }
 

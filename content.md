@@ -11,9 +11,8 @@
 - [X] Logos for Supported By
 - [X] Copyright text and color
 - [X] Add author notes
-- Bug: resize full screen width but only half height. huge space above "abstract" title (only first section)
-
-- Resize youtube videos
+- [X] Bug: resize full screen width but only half height. huge space above "abstract" title (only first section)
+- [X] Resize youtube videos
 
 - Final links
 
