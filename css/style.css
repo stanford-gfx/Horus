@@ -793,6 +793,17 @@
     display: none;
   }
 }
+.heroVideo-section-subnote {
+  color: white;
+  font-family: 'Inconsolata', sans-serif;
+  text-shadow: -1px 1px #4a4a4a;
+  font-size: 9px;
+}
+@media not all and (min-width: 668px) {
+  .heroVideo-section-subnote {
+    display: none;
+  }
+}
 .row {
   max-width: none !important;
 }
