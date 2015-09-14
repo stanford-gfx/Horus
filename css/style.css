@@ -838,6 +838,14 @@
   margin-right: auto;
   display: block;
 }
+.supportedItems {
+  text-align: center;
+}
+.supportedItems li {
+  display: inline-block;
+  width: 24%;
+  min-width: 200px;
+}
 .authorItem-name {
   padding: 0.5rem 0px 0.25rem 0px;
   font-family: 'Abel', sans-serif;
