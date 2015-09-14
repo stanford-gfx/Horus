@@ -18,9 +18,13 @@
 @font-title: 'Abel', sans-serif;
 @font-accent: 'Inconsolata', sans-serif;
 
+@mobile-breakpoint-px: 620px;
+
 @fontSize-heading: 32px;
 @fontSize-heading--secondary: 18px;
 @fontSize-paperTitle: 36px;
+@fontSize-paperTitle-mobile: 24px;
+
 @fontSize-button: 18px;
 @fontSize-footer: 11px;
 
@@ -32,7 +36,9 @@
 
 @padding-button: 0.6rem;
 @padding-video--hoz: 4rem;
-@padding-video--vert: 2rem;
+@padding-video--hoz-phone: 1rem;
+@padding-video--vert: 3rem;
+@padding-video--vert-phone: 1rem;
 @padding-section-tb: 3rem;
 @padding-section-lr: 6%;
 @padding-footer: 0.5rem;
@@ -74,8 +80,15 @@
 
 .heroVideo-section {
  position: absolute;
+ @media all and (min-width: @mobile-breakpoint-px) {
+	 bottom: @padding-video--vert;
+	 left: @padding-video--hoz;
+ }
+ @media not all and (min-width: @mobile-breakpoint-px) {
+ 	 bottom: @padding-video--vert-phone;
+ 	 left: @padding-video--hoz-phone;
+ }
  bottom: @padding-video--vert;
- left: @padding-video--hoz;
  z-index: @zIndex-videoText;
 }
 
@@ -107,7 +120,7 @@
 }
 
 .section {
-	@media (min-width: 760px) {
+	@media (min-width: @mobile-breakpoint-px) {
  		padding-left: @padding-section-lr;
 		padding-right: @padding-section-lr;
 	}
@@ -181,7 +194,7 @@
 
 .flex-video {
  margin-top: 0.25*@padding-video--vert;
- margin-bottom: @padding-video--vert;
+ margin-bottom: 0.5*@padding-video--vert;
 
  &:last-of-type {
   margin-bottom: 0px;

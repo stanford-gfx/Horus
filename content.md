@@ -4,12 +4,15 @@
 
 - [X] Fix title overflow for mobile
 - Fix width for mobile
+- Fix header font for mobile
+- Fix video for mobile
 - [X] Abstract padding
 - [X] Tribute
 - [X] Logos for Supported By
 - [X] Copyright text and color
 - [X] Add author notes
 - Final links
+
 
 Non-HTML:
 - Header Video. Maybe show off tool?
@@ -20,6 +23,9 @@ Non-HTML:
 Additional Sections?
 - Project Status / "Reqruiting" page
 - 
+
+Paper:
+- Add acknowledgments for Kespry for Dynamometer.
 
 ##################################
 ## Top Section

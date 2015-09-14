@@ -726,9 +726,20 @@
 }
 .heroVideo-section {
   position: absolute;
-  bottom: 2rem;
-  left: 4rem;
+  bottom: 3rem;
   z-index: 20;
+}
+@media all and (min-width: 620px) {
+  .heroVideo-section {
+    bottom: 3rem;
+    left: 4rem;
+  }
+}
+@media not all and (min-width: 620px) {
+  .heroVideo-section {
+    bottom: 1rem;
+    left: 1rem;
+  }
 }
 .heroVideo-section-paperTitle {
   color: white;
@@ -760,7 +771,7 @@
   letter-spacing: 0.6px;
   line-height: 1.5rem;
 }
-@media (min-width: 760px) {
+@media (min-width: 620px) {
   .section {
     padding-left: 6%;
     padding-right: 6%;
@@ -817,8 +828,8 @@
   cursor: pointer;
 }
 .flex-video {
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 .flex-video:last-of-type {
   margin-bottom: 0px;
@@ -830,7 +841,7 @@
   text-align: center;
 }
 .authorItems {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 }
 .authorItem {
