@@ -24,6 +24,7 @@
 @fontSize-heading--secondary: 18px;
 @fontSize-paperTitle: 36px;
 @fontSize-paperTitle-mobile: 24px;
+@fontSize-author-small: 12px;
 
 @fontSize-button: 18px;
 @fontSize-footer: 11px;
@@ -231,9 +232,19 @@
  text-align: center;
 }
 
+.author-note {
+ font-family: @font-text;
+ font-size: @fontSize-author-small;
+ line-height: 1.3rem;
+ margin: auto;
+ text-align: center;
+ padding-bottom: 1rem;
+}
+
 .authorItems {
  margin-top: @padding-video--vert;
  text-align: center;
+ margin-bottom: 1rem;
 }
 
 .authorItem {
@@ -267,13 +278,11 @@
 
 .authorItem-name {
  padding: @padding-author;
-
  font-family: @font-title;
 }
 
 .authorItem-institution, .authorItem-email {
-
- font-size: 12px;
+ font-size: @fontSize-author-small;
 }
 
 .authorItem-links {

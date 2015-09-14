@@ -871,9 +871,18 @@
   margin: auto;
   text-align: center;
 }
+.author-note {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.3rem;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 1rem;
+}
 .authorItems {
   margin-top: 3rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .authorItem {
   display: inline-block;
