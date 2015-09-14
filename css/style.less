@@ -73,12 +73,18 @@
 .subsection {
 	padding-bottom: @subsection-padding;
 }
-.heroVideo-container {
 
+.heroVideo-wrapper {
+	position: relative;
+	height: @height-video;
+	width: 100%;
+}
+
+.heroVideo-container {
  background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.png");
  background-repeat: no-repeat;
  background-size: 100% 100%;
- position: relative;
+ position: absolute;
  left: 0px;
  top: 0px;
  width: 100%;
@@ -87,6 +93,7 @@
  overflow: hidden;
  z-index: @zIndex-base;
 }
+
 
 .heroVideo {
  position: absolute;
