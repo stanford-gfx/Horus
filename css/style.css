@@ -718,6 +718,7 @@
   width: 100%;
 }
 .heroVideo-container {
+  background-color: #333333;
   background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
