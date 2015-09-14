@@ -53,6 +53,17 @@
  font-family: @font-text;
 }
 
+/******************** Media query mixins start *********************/
+.mobile-hide-div {
+ @media all and (min-width: @mobile-breakpoint-px) {
+ 	 }
+ @media not all and (min-width: @mobile-breakpoint-px) {
+ 	display: none;
+ }
+}
+
+/******************** Media query mixins end *********************/
+
 .firstSection {
  padding-top: @height-video + @subsection-padding !important;
 }
@@ -61,6 +72,17 @@
 	padding-bottom: @subsection-padding;
 }
 .heroVideo-container {
+
+ @media all and (min-width: @mobile-breakpoint-px) {
+
+ }
+ @media not all and (min-width: @mobile-breakpoint-px) {
+ 	font-size: 1em;
+ }
+
+ background-image: url("../images/00_TeaserVideo_Full.Still.png");
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
  position: absolute;
  left: 0px;
  top: @height-stanford;
@@ -76,6 +98,7 @@
  left: 0px;
  top: 0px;
  width: 100%;
+ .mobile-hide-div;
 }
 
 .heroVideo-section {
@@ -107,12 +130,14 @@
  font-family: @font-title;
  letter-spacing: 0.5px;
  text-shadow: -1px 1px @color-text--dark;
+ .mobile-hide-div;
 }
 
 .heroVideo-section-authors {
  color: white;
  font-family: @font-accent;
  text-shadow: -1px 1px @color-text--dark;
+ .mobile-hide-div;
 }
 
 .row {

@@ -702,6 +702,13 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
+/******************** Media query mixins start *********************/
+@media not all and (min-width: 620px) {
+  .mobile-hide-div {
+    display: none;
+  }
+}
+/******************** Media query mixins end *********************/
 .firstSection {
   padding-top: 60.25vw !important;
 }
@@ -709,6 +716,9 @@
   padding-bottom: 4vh !important;
 }
 .heroVideo-container {
+  background-image: url("../images/00_TeaserVideo_Full.Still.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   position: absolute;
   left: 0px;
   top: 30px;
@@ -718,11 +728,21 @@
   overflow: hidden;
   z-index: 10;
 }
+@media not all and (min-width: 620px) {
+  .heroVideo-container {
+    font-size: 1em;
+  }
+}
 .heroVideo {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
+}
+@media not all and (min-width: 620px) {
+  .heroVideo {
+    display: none;
+  }
 }
 .heroVideo-section {
   position: absolute;
@@ -756,10 +776,20 @@
   letter-spacing: 0.5px;
   text-shadow: -1px 1px #4a4a4a;
 }
+@media not all and (min-width: 620px) {
+  .heroVideo-section-attribution {
+    display: none;
+  }
+}
 .heroVideo-section-authors {
   color: white;
   font-family: 'Inconsolata', sans-serif;
   text-shadow: -1px 1px #4a4a4a;
+}
+@media not all and (min-width: 620px) {
+  .heroVideo-section-authors {
+    display: none;
+  }
 }
 .row {
   max-width: none !important;
