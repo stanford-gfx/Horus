@@ -82,6 +82,7 @@
 }
 
 .heroVideo-container {
+ z-index: -100;
  background-color: @color-dark-background;
  background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.jpg");
  background-repeat: no-repeat;
@@ -91,7 +92,7 @@
  top: 30px;
  width: 100%;
  height: @height-video;
- max-height: 100vh;
+ max-height: ~"calc(100vh - 30px)";
  overflow: hidden;
  z-index: @zIndex-base;
 }
