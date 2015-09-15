@@ -709,16 +709,20 @@
   }
 }
 /******************** Media query mixins end *********************/
+.firstSection {
+  padding-top: 60.25vw !important;
+}
 .subsection {
   padding-bottom: 4vh !important;
 }
 .heroVideo-container {
-  background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.png");
+  background-color: #333333;
+  background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  position: relative;
+  position: absolute;
   left: 0px;
-  top: 0px;
+  top: 30px;
   width: 100%;
   height: 56.25vw;
   max-height: 100vh;

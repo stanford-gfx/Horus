@@ -10,6 +10,7 @@
 @color-buttonBorder: #4A4A4A;
 @color-stanford: #8c1515;
 @color-grey-background: #eee;
+@color-dark-background: #333;
 
 @borderRadius-button: 0.5rem;
 
@@ -67,26 +68,34 @@
 /******************** Media query mixins end *********************/
 
 .firstSection {
- //padding-top: @height-video + @subsection-padding !important;
+ padding-top: @height-video + @subsection-padding !important;
 }
 
 .subsection {
 	padding-bottom: @subsection-padding;
 }
-.heroVideo-container {
 
- background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.png");
+.heroVideo-wrapper {
+	// position: relative;
+	// height: @height-video;
+	// width: 100%;
+}
+
+.heroVideo-container {
+ background-color: @color-dark-background;
+ background-image: url("../images/00_TeaserVideo_Full_Placeholder.Still002.jpg");
  background-repeat: no-repeat;
  background-size: 100% 100%;
- position: relative;
+ position: absolute;
  left: 0px;
- top: 0px;
+ top: 30px;
  width: 100%;
  height: @height-video;
  max-height: 100vh;
  overflow: hidden;
  z-index: @zIndex-base;
 }
+
 
 .heroVideo {
  position: absolute;
