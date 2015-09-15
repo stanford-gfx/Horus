@@ -1,1 +1,1 @@
-Joubert, N., Roberts, M., Truong, A., Berthouzoz, F., and Hanrahan, P. "An Interactive Tool for Designing Quadrotor Camera Shots", SIGGRAPH Asia (2015).
+Joubert, N., Roberts, M., Truong, A., Berthouzoz, F., and Hanrahan, P. "An Interactive Tool for Designing Quadrotor Camera Shots", ACM Transactions on Graphics (SIGGRAPH Asia 2015).
