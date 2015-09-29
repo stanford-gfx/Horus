@@ -793,11 +793,16 @@
     display: none;
   }
 }
+sup {
+  /* Move the superscripted text up */
+  position: relative;
+  top: 0.3em;
+}
 .heroVideo-section-subnote {
   color: white;
   font-family: 'Inconsolata', sans-serif;
   text-shadow: -1px 1px #4a4a4a;
-  font-size: 14px;
+  font-size: 12px;
 }
 @media not all and (min-width: 668px) {
   .heroVideo-section-subnote {
@@ -932,6 +937,13 @@
 }
 .authorItem-links-icon:hover {
   color: #8c1515;
+}
+.acknowledgementList {
+  font-size: 14px;
+  padding: 10px 6px;
+}
+.acknowledgementList li {
+  margin-bottom: 8px;
 }
 .youtube {
   position: relative;
