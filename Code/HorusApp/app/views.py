@@ -34,9 +34,9 @@ def easing_curve():
   return render_template('easing_curve.html', shots=shots)
 
 # TEXT ROUTE
-@server.route('/edit_shot')
-def edit_shot():
-  return render_template('edit_shot.html')
+@server.route('/edit')
+def edit():
+  return render_template('edit.html')
 
 
 @server.route('/api/get_keyframes.json', methods = ['POST'])

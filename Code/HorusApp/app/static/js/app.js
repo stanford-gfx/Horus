@@ -106,7 +106,7 @@ define(['env',
         }
         if (!ENV.shotName) {
             ENV.shotName = enteredShotname;
-            window.history.pushState("", "", "/edit_shot?shot=" + ENV.shotName);
+            window.history.pushState("", "", "/edit?shot=" + ENV.shotName);
 
         } else if (ENV.shotName != enteredShotname) {
             alert('You cannot currently change shot names. Edit the file on disk.');
