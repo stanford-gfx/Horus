@@ -14,6 +14,6 @@ If you find Horus useful in your research, please cite our SIGGRAPH Asia paper. 
 
 Horus is an in-browser Javascript application with a Python backend. It relies on the Google Earth NSAPI plugin and Google Chromium. We tested Horus exclusively on Mac OS X. Installation instructions can be found here:
 
-https://docs.google.com/document/d/1t-euYONWhzXfZr2kS9Qt8z9R9N8hgF3YIWdFDxR72AI/edit
+https://docs.google.com/document/d/1t-euYONWhzXfZr2kS9Qt8z9R9N8hgF3YIWdFDxR72AI
 
 If you have any questions, email Mike Roberts at mlrobert@stanford.edu.
