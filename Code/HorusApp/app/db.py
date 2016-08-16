@@ -31,7 +31,14 @@ class ShotDB():
     filename = "%.4d.json" % shotrevision
     print "Saving shot %s revision %s as %s" % (shotname, filename, secure_shotname)
 
-    gitversion = subprocess.check_output(["git", "describe", "--dirty"])
+    try:
+      print 'Attempting to retrieve git metadata for debugging purposes, by running "get describe --dirty" command...'
+      gitversion = subprocess.check_output(["git", "describe", "--dirty"])
+      print "Successfully retrieved git tag metadata."
+    except:
+      print 'Could not retrieve git metadata. This metadata is used for debugging and is not essential. Saving file without metadata.'
+      gitversion = "__NO_GIT_METADATA__"
+
     decoded = json.load(StringIO(data))
     decoded['git-describe'] = gitversion
     data = json.dumps(decoded, separators=(',',':'))
