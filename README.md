@@ -1,6 +1,6 @@
 # Horus: An Interactive Tool for Designing Quadrotor Camera Shots
 
-Horus is an interactive tool for designing quadrotor camera shots. We describe Horus in detail in the following paper:
+Horus is an interactive tool for designing quadrotor camera shots. We describe Horus in detail in the following paper.
 
 [An Interactive Tool for Designing Quadrotor Camera Shots](http://stanford-gfx.github.io/Horus/)  
 Niels Joubert, Mike Roberts, Anh Truong, Floraine Berthouzoz, Pat Hanrahan  
