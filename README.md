@@ -8,9 +8,9 @@ ACM Transactions on Graphics 34(6) (SIGGRAPH Asia 2015)
 
 If you use Horus for published work, we encourage you to cite this paper.
 
-Much of the functionality that exists in Horus for computing quadrotor trajectories is available in the standalone Python library [Flashlight](http://mikeroberts3000.github.io/flashlight).
+Much of the functionality that exists in Horus for computing quadrotor trajectories is now available in the standalone Python library [Flashlight](http://mikeroberts3000.github.io/flashlight).
 
-## Installation Instructions
+## Horus Installation Instructions
 
 Horus is an in-browser Javascript application with a Python backend. It relies on the Google Earth NSAPI plugin and Google Chromium. We tested Horus exclusively on Mac OS X.
 
