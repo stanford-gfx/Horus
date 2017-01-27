@@ -23,8 +23,9 @@ The steps for installing Horus are as follows. If you have any questions, email 
   * Chromium. Google stopped supporting Google Earth in the default Chrome, so you'll need to use a very specific version of Chromium. Navigate to to the following URL to download Chromium.
     * http://sourceforge.net/projects/osxportableapps/files/Chromium/  
     (make sure to download `ChromiumOSX_38.0.2125.122.dmg`)
-  * Google Earth for Chromium. Navigate to the following URL in Chromium to install Google Earth for Chromium.
+  * Google Earth for Chromium. Google stopped supporting the Google Earth for Chromium plugin, but our users report that the following installer file still works. We've uploaded it to our own GitHub repository for posterity.
     * https://www.google.com/earth/explore/products/plugin.html
+    * https://github.com/stanford-gfx/Horus/raw/master/Data/GoogleEarth/googleearth-mac-plugin-intel.dmg
   * Python packages. I personally like using pip to install Python packages. Alternatively, you can also download each from these packages from source. We list the Python packages required by Horus, and the pip commands required to install them.
     * Flask
       * `sudo pip install flask`
