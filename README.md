@@ -14,6 +14,8 @@ Much of the functionality that exists in Horus for computing quadrotor trajector
 
 ## Horus Installation Instructions
 
+**Update: Unfortunately, the Google Earth web API upon which Horus was built has been [deprecated](https://developers.google.com/earth/). We hope that Google will re-introduce the Google Earth web API soon. Until then, there is no way to run Horus without significant developer effort. In the meantime, we are choosing to leave the installation instructions here in case Google re-introduces the relevant API. The core functionality in Horus is still available in the standalone Python library [Flashlight](http://mikeroberts3000.github.io/flashlight).**
+
 Horus is an in-browser Javascript application with a Python backend. It relies on the Google Earth NSAPI plugin and Google Chromium. We tested Horus exclusively on Mac OS X.
 
 The steps for installing Horus are as follows. If you have any questions, email [Mike Roberts](mailto:mlrobert@stanford.edu).
